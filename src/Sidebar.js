@@ -1,0 +1,44 @@
+import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload, faCircleHalfStroke, faPowerOff} from '@fortawesome/free-solid-svg-icons'
+
+function Sidebar(){
+    return(
+        <div className="w-2/12 bg-primary text-white">
+            <div className="">
+                <img
+                    className="h-16 rounded-full self-start mx-2 my-3 "
+                    src="data:image/png;base64,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" alt="client"
+                />
+                <h3 className="m-2">Nitish</h3>
+                <span className="m-1">Retailer(STRCS123)</span>
+                <ul className="m-4"> 
+                    <li>
+                    <FontAwesomeIcon icon={faDownload} className="m-2 text-lg"/>
+                    <FontAwesomeIcon icon={faCircleHalfStroke} className="m-2 text-lg"/>
+                    <FontAwesomeIcon icon={faPowerOff} className="m-2 text-lg"/>
+                    <FontAwesomeIcon icon={faPowerOff} className="m-2 text-lg"/>
+                    </li>
+                </ul>
+            </div>
+            <div className="my-10">
+                <ul>
+                    <li className="mx-auto my-2 ">Dashboard</li>
+                    <li className="mx-auto my-2 border-t-2">Fund Request</li>
+                    <li className="mx-auto my-2 border-t-2">Bank Service</li>
+                    <li className="mx-auto my-2 border-t-2">Manage Member</li>
+                    <li className="mx-auto my-2 border-t-2">All Report</li>
+                    <li className="mx-auto my-2 border-t-2">Payout DMT</li>
+                </ul>
+            </div>
+            <div className="my-6">
+                <ul>
+                    <li className="mx-auto my-2">Settings</li>
+                    <li className="mx-auto my-2">Dark Mode</li>
+                </ul>
+            </div>
+        </div>
+    );
+}
+
+export default Sidebar;
